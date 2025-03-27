@@ -11,7 +11,7 @@ namespace MyGame
 
         public Enemy(string name)
         {
-            this.name = name;
+            this.name = SetName(name);
             health = 100;
             shield = 0;
         }
@@ -48,9 +48,9 @@ namespace MyGame
             }
         }
 
-        public string SetName(string enemyName)
+        public string SetName(string newEnemyName)
         {
-            string name = enemyName;
+            string name = newEnemyName;
             int legthName = name.Length;
 
             if (legthName > 8)
