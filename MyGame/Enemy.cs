@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 
 namespace MyGame   
@@ -45,6 +46,18 @@ namespace MyGame
                     health = 0;
                 }
             }
+        }
+
+        public string SetName(string enemyName)
+        {
+            string name = enemyName;
+            int legthName = name.Length;
+
+            if (legthName > 8)
+            {
+                name = name.Substring(0, 8);
+            }
+            return name;
         }
     }
 }
