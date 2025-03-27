@@ -8,6 +8,7 @@ namespace MyGame
         private string name;
         private float health;
         private float shield;
+        private static int getPowerUp;
 
         public Enemy(string name)
         {
@@ -29,6 +30,11 @@ namespace MyGame
         public float GetShield()
         {
             return shield;
+        }
+
+        static Enemy()
+        {
+            getPowerUp = 0;
         }
 
         public void TakeDamage(float damage)
@@ -78,6 +84,12 @@ namespace MyGame
                     shield = 100;
                 }
             }
+            getPowerUp ++;
+        }
+
+        public static int GetPowerUp()
+        {
+            return getPowerUp;
         }
     }
 }

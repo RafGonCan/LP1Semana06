@@ -20,6 +20,7 @@ namespace MyGame
                 name.TakeDamage(50);
                 Console.WriteLine($"{name.GetName()} {name.GetHealth()} {name.GetShield()}");
             }
+            Console.WriteLine($"Number of the PowerUp: {Enemy.GetPowerUp()}");
         }
     }
 }
