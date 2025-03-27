@@ -62,7 +62,7 @@ namespace MyGame
         
         public void PickPowerUp(PowerUp powerUp, float value)
         {
-            if (powerUp == powerUp.Health)
+            if (powerUp == PowerUp.Health)
             {
                 health += value;
                 if (health > 100)
@@ -70,7 +70,7 @@ namespace MyGame
                     health = 100;
                 }
             }
-            else if (powerUp == powerUp.Shield)
+            else if (powerUp == PowerUp.Shield)
             {
                 shield += 100;
                 if (shield > 100)

@@ -15,6 +15,9 @@ namespace MyGame
             }
             foreach (Enemy name in enemyName)
             {
+                name.PickPowerUp(PowerUp.Health, 70);
+                name.PickPowerUp(PowerUp.Shield, 250);
+                name.TakeDamage(50);
                 Console.WriteLine($"{name.GetName()} {name.GetHealth()} {name.GetShield()}");
             }
         }
