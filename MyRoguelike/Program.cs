@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using Humanizer;
 
 namespace MyRoguelike
@@ -25,17 +24,42 @@ namespace MyRoguelike
 
             lvl.PrintEnemies();
         }
-        public class Level
+        internal class Level
         {
             private int roomNum;
             private Thoughness thoughness;
+            private int numEnemies;
 
-            public Level(int roomNum, Thoughness thoughness)
+            public Level(int roomNum, Thoughness thoughness, int numEnemies)
             {
                 this.roomNum = 0;
                 this.thoughness = thoughness;
+                this.numEnemies = 0;
             }
-            
+            public int GetNumRooms()
+            {
+                return roomNum;
+            }            
+            public Thoughness GetToughness()
+            {
+                return thoughness;
+            }
+            public int GetNumEnemies()
+            {
+                return numEnemies;
+            }
+            public int SetEnemyInRoom()
+            {
+                return roomNum;
+            }
+            public string PrintEnemies()
+            {
+                for (int numEnemies = 0; numEnemies < roomNum; numEnemies++)
+                {
+                    Console.WriteLine($"{roomNum} room: {numEnemies}");
+                }
+                return roomNum.ToOrdinalWords();
+            }
         }
     }
 }
